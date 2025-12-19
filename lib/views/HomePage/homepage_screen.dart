@@ -24,7 +24,7 @@ class HomepageScreen extends StatelessWidget {
                   CustomCircleButton(icon: Icons.notifications_none_outlined),
                 ],
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 16),
               headingTwo(data: "Make Your"),
               headingTwo(
                 data: "Body Perfect",
@@ -32,7 +32,7 @@ class HomepageScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               CustomHeroCard(),
-              SizedBox(height: 24),
+              SizedBox(height: 20),
               Row(
                 children: [
                   Expanded(
@@ -42,7 +42,7 @@ class HomepageScreen extends StatelessWidget {
                       value: "1.8 km",
                     ),
                   ),
-                  SizedBox(width: 10),
+                  SizedBox(width: 8),
                   Expanded(
                     child: CustomDetailsCard(
                       icon: Icons.directions_bike_rounded,
