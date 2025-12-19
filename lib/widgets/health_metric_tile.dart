@@ -2,14 +2,10 @@ import 'package:fitness_tracker_app/utils/colors.dart';
 import 'package:fitness_tracker_app/utils/text_style.dart';
 import 'package:flutter/material.dart';
 
-class CustomOverviewTile extends StatelessWidget {
+class HealthMetricTile extends StatelessWidget {
   final String title;
   final String value;
-  const CustomOverviewTile({
-    super.key,
-    required this.title,
-    required this.value,
-  });
+  const HealthMetricTile({super.key, required this.title, required this.value});
 
   @override
   Widget build(BuildContext context) {

@@ -3,8 +3,8 @@ import 'package:fitness_tracker_app/utils/text_style.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class CustomChart extends StatelessWidget {
-  const CustomChart({super.key});
+class CustomBarChart extends StatelessWidget {
+  const CustomBarChart({super.key});
 
   @override
   Widget build(BuildContext context) {

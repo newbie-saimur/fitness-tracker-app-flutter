@@ -1,9 +1,9 @@
 import 'package:fitness_tracker_app/utils/colors.dart';
 import 'package:fitness_tracker_app/utils/text_style.dart';
-import 'package:fitness_tracker_app/widgets/custom_blood_pressure_card.dart';
+import 'package:fitness_tracker_app/widgets/blood_pressure_card.dart';
 import 'package:fitness_tracker_app/widgets/custom_circle_button.dart';
 import 'package:fitness_tracker_app/widgets/custom_overview_card.dart';
-import 'package:fitness_tracker_app/widgets/custom_overview_tile.dart';
+import 'package:fitness_tracker_app/widgets/health_metric_tile.dart';
 import 'package:flutter/material.dart';
 
 class FitnessTracker extends StatelessWidget {
@@ -44,13 +44,13 @@ class FitnessTracker extends StatelessWidget {
                       spacing: 40,
                       children: [
                         Expanded(
-                          child: CustomOverviewTile(
+                          child: HealthMetricTile(
                             title: "Calories",
                             value: "1360 kCal",
                           ),
                         ),
                         Expanded(
-                          child: CustomOverviewTile(
+                          child: HealthMetricTile(
                             title: "Protein",
                             value: "30 Gram",
                           ),
@@ -62,13 +62,13 @@ class FitnessTracker extends StatelessWidget {
                       spacing: 40,
                       children: [
                         Expanded(
-                          child: CustomOverviewTile(
+                          child: HealthMetricTile(
                             title: "Sleep",
                             value: "3 Hours",
                           ),
                         ),
                         Expanded(
-                          child: CustomOverviewTile(
+                          child: HealthMetricTile(
                             title: "Weight",
                             value: "67 KG",
                           ),
@@ -81,7 +81,7 @@ class FitnessTracker extends StatelessWidget {
               SizedBox(height: 20),
               CustomOverviewCard(),
               SizedBox(height: 12),
-              CustomBloodPressureCard(),
+              BloodPressureCard(),
             ],
           ),
         ),

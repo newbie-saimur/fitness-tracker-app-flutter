@@ -1,6 +1,6 @@
 # 🏋️ Fitness Tracker App
 
-A modern, beautiful fitness tracking application built with Flutter. Track your workouts, monitor health metrics, and achieve your fitness goals with an elegant dark-themed UI.
+A modern fitness tracking mobile application built with Flutter featuring a sleek dark theme with neon green accents. Practice project for learning Flutter UI development and state management.
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
@@ -16,33 +16,24 @@ A modern, beautiful fitness tracking application built with Flutter. Track your 
 
 ### 🏠 Home Screen
 
--   **Quick Exercise Access** - Start full body exercise workouts with calorie and time information
--   **Activity Tracking** - Monitor running distance and cycling metrics
--   **Exercise Appointment** - Quick call button for exercise practice appointments
--   **Modern UI** - Clean, dark-themed interface with neon green accents
+-   **Exercise Hero Card** - Full body exercise program with calorie (1230 kCal) and duration (50 min) info
+-   **Activity Metrics** - Running distance (1.8 km) and cycling distance (7.3 km) cards with dual-theme styling
+-   **Appointment Section** - Quick access to exercise practice scheduling with call button
+-   **Custom Navigation** - Circular icon buttons for menu and notifications
 
 ### 📊 Health Overview Screen
 
--   **Health Metrics Dashboard** - Track calories, protein, sleep, and weight
--   **Heart Rate Monitor** - R-R interval tracking with visual timeline
--   **Blood Pressure Chart** - Weekly blood pressure visualization using interactive bar charts
--   **Custom Navigation** - Smooth transitions between screens
-
-### 🎨 UI Components
-
--   Custom hero cards with exercise information
--   Reusable detail cards for metrics display
--   Interactive charts using fl_chart package
--   Custom circular buttons with icons
--   Responsive layout for different screen sizes
+-   **Health Metrics Dashboard** - Track 4 key metrics: Calories (1360 kCal), Protein (30g), Sleep (3 hrs), Weight (67 kg)
+-   **Heart Rate Monitoring** - R-R interval display (851 ms) with time interval tracking (850/830/810 ms)
+-   **Blood Pressure Chart** - Weekly bar chart visualization with day labels (S-M-T-W-T-F-S)
+-   **Interactive UI** - Back navigation and notification access
 
 ## 🛠️ Tech Stack
 
 -   **Framework**: Flutter 3.10.1+
 -   **Language**: Dart
--   **UI**: Material Design with custom styling
--   **Charts**: fl_chart ^1.1.1
--   **State Management**: StatelessWidget (simple app structure)
+-   **UI**: Material Design with custom components
+-   **Charting**: fl_chart ^1.1.1
 
 ## 📦 Dependencies
 
@@ -58,18 +49,18 @@ dependencies:
 
 ### Prerequisites
 
--   Flutter SDK (3.10.1 or higher)
+-   Flutter SDK 3.10.1 or higher
 -   Dart SDK
--   Android Studio / VS Code
--   Android Emulator / iOS Simulator / Physical Device
+-   VS Code or Android Studio
+-   Android Emulator / iOS Simulator
 
 ### Installation
 
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/yourusername/fitness_tracker_app.git
-    cd fitness_tracker_app
+    git clone https://github.com/newbie-saimur/fitness-tracker-app-flutter.git
+    cd fitness-tracker-app-flutter
     ```
 
 2. **Install dependencies**
@@ -83,9 +74,9 @@ dependencies:
     flutter run
     ```
 
-### Build for Production
+### Build
 
-**Android:**
+**Android APK:**
 
 ```bash
 flutter build apk --release
@@ -97,95 +88,69 @@ flutter build apk --release
 flutter build ios --release
 ```
 
-**Web:**
-
-```bash
-flutter build web
-```
-
 ## 📁 Project Structure
 
 ```
 lib/
-├── main.dart                          # App entry point
+├── main.dart                      # App entry point
 ├── views/
 │   ├── HomePage/
-│   │   └── homepage_screen.dart       # Home screen
+│   │   └── homepage_screen.dart   # Main home screen
 │   └── FitnessTracker/
-│       └── fitness_tracker.dart       # Health overview screen
+│       └── fitness_tracker.dart   # Health tracking screen
 ├── widgets/
-│   ├── custom_hero_card.dart          # Exercise card component
-│   ├── custom_details_card.dart       # Metric detail cards
-│   ├── custom_overview_card.dart      # Heart rate overview
-│   ├── custom_overview_tile.dart      # Health metric tiles
-│   ├── custom_blood_pressure_card.dart # Blood pressure chart
-│   ├── custom_chart.dart              # Bar chart component
-│   ├── custom_circle_button.dart      # Circular icon buttons
-│   ├── custom_icon_text.dart          # Icon + text combo
-│   └── custom_time_tracker.dart       # Time tracking widget
+│   ├── custom_hero_card.dart      # Featured exercise card
+│   ├── custom_details_card.dart   # Activity metric cards
+│   ├── custom_overview_card.dart  # Heart rate monitoring widget
+│   ├── health_metric_tile.dart    # Health stat tiles
+│   ├── blood_pressure_card.dart   # BP chart container
+│   ├── custom_bar_chart.dart      # Weekly bar chart
+│   ├── custom_circle_button.dart  # Circular icon buttons
+│   ├── custom_icon_text.dart      # Icon + text row
+│   └── custom_time_tracker.dart   # Time interval indicators
 └── utils/
-    ├── colors.dart                    # App color scheme
-    └── text_style.dart                # Text styling utilities
+    ├── colors.dart                # Color constants (#E7FE55, #1E1F1A, #000000)
+    └── text_style.dart            # Reusable text styles
 ```
 
-## 🎨 Color Scheme
+## 🎨 Custom Widgets
 
-```dart
-Primary Color:    #E7FE55 (Neon Green)
-Secondary Color:  #1E1F1A (Dark Gray)
-Background:       #000000 (Black)
-```
+### Core Components
 
-## 🔑 Key Features Breakdown
+-   **CustomHeroCard** - Hero banner with exercise info, image overlay, and CTA button
+-   **CustomDetailsCard** - Flexible metric card with icon, supports light/dark theme
+-   **CustomOverviewCard** - Heart rate display with time interval timeline
+-   **HealthMetricTile** - Dot indicator + title/value display for health stats
+-   **BloodPressureCard** - Container with dropdown and chart integration
+-   **CustomBarChart** - fl_chart BarChart with weekly data and bottom labels
+-   **CustomCircleButton** - Reusable circular button with tap handler
+-   **CustomIconText** - Icon and text combination widget
+-   **CustomTimeTracker** - Visual time indicator with filled/unfilled state
 
-### Navigation
+### Text Utilities
 
--   Utilizes `Navigator.push()` for screen transitions
--   Back button functionality on detail screens
+-   `headingTwo()` - 32px bold headings
+-   `headingThree()` - 24px bold subheadings
+-   `bodyLarge()` - 18px medium text
+-   `bodyNormal()` - 16px regular text
 
-### Custom Widgets
+## 🎯 Learning Outcomes
 
--   **CustomHeroCard**: Main exercise promotion card with image overlay
--   **CustomDetailsCard**: Dual-color metric display cards
--   **CustomOverviewCard**: Heart rate monitoring with time intervals
--   **CustomBloodPressureCard**: Weekly chart visualization
--   **CustomChart**: Reusable bar chart with fl_chart integration
+This project demonstrates:
 
-### Responsive Design
-
--   Uses `Expanded` widgets for flexible layouts
--   `SingleChildScrollView` for scrollable content
--   Proper spacing with `SizedBox` and padding
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
+-   Flutter layout system (Container, Row, Column, Stack)
+-   Custom reusable widget architecture
+-   fl_chart integration for data visualization
+-   Navigation between screens
+-   Theme consistency with utility files
+-   Responsive spacing and alignment
+-   State management with StatelessWidget
 
 ## 👨‍💻 Author
 
-Your Name
+**newbie-saimur**
 
--   GitHub: [@yourusername](https://github.com/yourusername)
-
-## 🙏 Acknowledgments
-
--   Flutter team for the amazing framework
--   fl_chart package for beautiful chart visualizations
--   Material Design for UI guidelines
-
-## 📞 Support
-
-For support, email your-email@example.com or create an issue in this repository.
+-   GitHub: [@newbie-saimur](https://github.com/newbie-saimur)
 
 ---
 

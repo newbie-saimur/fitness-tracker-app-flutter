@@ -1,10 +1,10 @@
 import 'package:fitness_tracker_app/utils/colors.dart';
 import 'package:fitness_tracker_app/utils/text_style.dart';
-import 'package:fitness_tracker_app/widgets/custom_chart.dart';
+import 'package:fitness_tracker_app/widgets/custom_bar_chart.dart';
 import 'package:flutter/material.dart';
 
-class CustomBloodPressureCard extends StatelessWidget {
-  const CustomBloodPressureCard({super.key});
+class BloodPressureCard extends StatelessWidget {
+  const BloodPressureCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class CustomBloodPressureCard extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          CustomChart(),
+          CustomBarChart(),
         ],
       ),
     );
