@@ -1,15 +1,39 @@
 import 'package:flutter/material.dart';
 
 class CustomCircleButton extends StatelessWidget {
-  const CustomCircleButton({super.key});
+  final Color? backgroundColor;
+  final Color? color;
+  final IconData icon;
+  final double? width;
+  final double? height;
+  final FontWeight? fontWeight;
+  const CustomCircleButton({
+    super.key,
+    this.backgroundColor,
+    this.color,
+    required this.icon,
+    this.width,
+    this.height,
+    this.fontWeight,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 80,
-      height: 80,
-      decoration: BoxDecoration(color: Colors.white10, shape: BoxShape.circle),
-      child: Center(child: Icon(Icons.grid_view, size: 30)),
+      width: width ?? 80,
+      height: height ?? 80,
+      decoration: BoxDecoration(
+        color: backgroundColor ?? Colors.white10,
+        shape: BoxShape.circle,
+      ),
+      child: Center(
+        child: Icon(
+          icon,
+          size: 26,
+          color: color ?? Colors.white,
+          fontWeight: fontWeight ?? FontWeight.normal,
+        ),
+      ),
     );
   }
 }
