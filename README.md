@@ -23,7 +23,7 @@ A modern fitness tracking mobile application built with Flutter featuring a slee
 
 ### 📊 Health Overview Screen
 
--   **Health Metrics Dashboard** - Track 4 key metrics: Calories (1360 kCal), Protein (30g), Sleep (3 hrs), Weight (67 kg)
+-   **Health Metrics Dashboard** - Track 4 key metrics: Calories, Protein, Sleep, Weight
 -   **Heart Rate Monitoring** - R-R interval display (851 ms) with time interval tracking (850/830/810 ms)
 -   **Blood Pressure Chart** - Weekly bar chart visualization with day labels (S-M-T-W-T-F-S)
 -   **Interactive UI** - Back navigation and notification access
@@ -41,7 +41,6 @@ A modern fitness tracking mobile application built with Flutter featuring a slee
 dependencies:
     flutter:
         sdk: flutter
-    cupertino_icons: ^1.0.8
     fl_chart: ^1.1.1
 ```
 
@@ -126,13 +125,6 @@ lib/
 -   **CustomCircleButton** - Reusable circular button with tap handler
 -   **CustomIconText** - Icon and text combination widget
 -   **CustomTimeTracker** - Visual time indicator with filled/unfilled state
-
-### Text Utilities
-
--   `headingTwo()` - 32px bold headings
--   `headingThree()` - 24px bold subheadings
--   `bodyLarge()` - 18px medium text
--   `bodyNormal()` - 16px regular text
 
 ## 🎯 Learning Outcomes
 
